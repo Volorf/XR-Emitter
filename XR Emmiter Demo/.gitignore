@@ -9,8 +9,9 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/[Aa]ssets/XR
 
-# Asset meta data should only be ignored when the corresponding asset is also ignored
+# Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
@@ -58,5 +59,3 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-XR Emmiter Demo/.DS_Store
-.DS_Store
