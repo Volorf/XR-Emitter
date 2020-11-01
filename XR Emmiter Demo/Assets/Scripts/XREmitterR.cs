@@ -27,7 +27,7 @@ public class XREmitterR : MonoBehaviour
     {
         if (xrController == null)
         {
-            Debug.LogWarning("You did't add XR Controller to the script.");
+            Debug.LogWarning("Probably, you did't add XR Controller to the script.");
             return;
         };
         
