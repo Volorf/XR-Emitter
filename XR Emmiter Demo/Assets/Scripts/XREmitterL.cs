@@ -6,7 +6,7 @@ using System;
 public class XREmitterL : MonoBehaviour
 {
     [SerializeField] private XRController xrController = null;
-
+    
     public static event Action<float> OnTriggerIntensity;
     public static event Action<bool> OnTriggerPressed;
 
