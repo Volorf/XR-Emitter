@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class UIManager : MonoBehaviour
 
     private string GetConsoleLogMessage()
     {
-        _consoleLog = "OnTriggerIntensity: " + _onTriggerIntensityValue + "\n" +
+        _consoleLog = "OnTriggerIntensity: " + Math.Round(_onTriggerIntensityValue, 3) + "\n" +
                       "OnTriggerPressed: " + _onTriggerPressedValue + "\n" +
                       "OnPrimaryButtonPressed: " + _onPrimaryButtonPressedValue + "\n";
         
