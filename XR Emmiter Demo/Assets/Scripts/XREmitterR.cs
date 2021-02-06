@@ -8,13 +8,13 @@ public class XREmitterR : MonoBehaviour
     [SerializeField] private XRController xrController = null;
 
     public static event Action<float> OnTriggerIntensity;
-    public static event Action<bool> OnTriggerPressed;
+    public static event Action<bool> OnTriggerButtonPressed;
 
     public static event Action<bool> OnPrimaryButtonPressed;
-    public static event Action<bool> OnPrimaryTouched;
+    public static event Action<bool> OnPrimaryButtonTouched;
 
     public static event Action<bool> OnSecondaryButtonPressed;
-    public static event Action<bool> OnSecondaryTouched;
+    public static event Action<bool> OnSecondaryButtonTouched;
 
     public static event Action<float> OnGripIntensity;
     public static event Action<bool> OnGripPressed;
@@ -27,13 +27,13 @@ public class XREmitterR : MonoBehaviour
     {
         if (xrController == null)
         {
-            Debug.LogWarning("Probably, you did't add XR Controller to the script.");
+            Debug.LogWarning("You did't add XR Controller to the script.");
             return;
         };
         
         // Trigger
         if (xrController.inputDevice.TryGetFeatureValue(CommonUsages.trigger, out float intensity)) OnTriggerIntensity?.Invoke(intensity);
-        if (xrController.inputDevice.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerPressed)) OnTriggerPressed?.Invoke(triggerPressed);
+        if (xrController.inputDevice.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerPressed)) OnTriggerButtonPressed?.Invoke(triggerPressed);
         
         // Joystick
         if (xrController.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 primary2Daxis)) OnPrimary2DAxis?.Invoke(primary2Daxis);
@@ -42,11 +42,11 @@ public class XREmitterR : MonoBehaviour
         
         // Primary button
         if (xrController.inputDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButtonPressed)) OnPrimaryButtonPressed?.Invoke(primaryButtonPressed);
-        if (xrController.inputDevice.TryGetFeatureValue(CommonUsages.primaryTouch, out bool primaryTouched)) OnPrimaryTouched?.Invoke(primaryTouched);
+        if (xrController.inputDevice.TryGetFeatureValue(CommonUsages.primaryTouch, out bool primaryTouched)) OnPrimaryButtonTouched?.Invoke(primaryTouched);
         
         // Secondary button
         if (xrController.inputDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out bool secondaryButtonPressed)) OnSecondaryButtonPressed?.Invoke(secondaryButtonPressed);
-        if (xrController.inputDevice.TryGetFeatureValue(CommonUsages.secondaryTouch, out bool secondaryTouched)) OnSecondaryTouched?.Invoke(secondaryTouched);
+        if (xrController.inputDevice.TryGetFeatureValue(CommonUsages.secondaryTouch, out bool secondaryTouched)) OnSecondaryButtonTouched?.Invoke(secondaryTouched);
         
         // Grip
         if (xrController.inputDevice.TryGetFeatureValue(CommonUsages.grip, out float gripIntensity)) OnGripIntensity?.Invoke(gripIntensity);
