@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 17073442}
   - component: {fileID: 17073441}
   - component: {fileID: 17073440}
+  - component: {fileID: 17073444}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -222,6 +223,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 3, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &17073444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17073439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba22054fe63844c1d9a1cec00bc8cef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 892281625}
 --- !u!1 &72926259
 GameObject:
   m_ObjectHideFlags: 0

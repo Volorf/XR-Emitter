@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class UIManager : MonoBehaviour
@@ -8,35 +6,32 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI label;
 
     private float _onTriggerIntensityValue;
+    private bool _onTriggerPressedValue;
+    private bool _onPrimaryButtonPressedValue;
 
     private string _consoleLog;
     private void Start()
     {
         XREmitterR.OnTriggerIntensity += SetOnTriggerIntensityValue;
-        
+        XREmitterR.OnTriggerPressed += SetOnTriggerPressedValue;
+        XREmitterR.OnPrimaryButtonPressed += SetOnPrimaryButtonPressedValue;
     }
 
-    private void SetOnTriggerIntensityValue(float f)
-    {
-        _onTriggerIntensityValue = f;
-    }
+    private void SetOnTriggerIntensityValue(float f) { _onTriggerIntensityValue = f; }
+    private void SetOnTriggerPressedValue(bool b) { _onTriggerPressedValue = b; }
+    private void SetOnPrimaryButtonPressedValue(bool b) { _onPrimaryButtonPressedValue = b; }
     
     private void Update()
     {
-        if (_consoleLog == null)
-        {
-            label.text = "no XREmitter";
-            return;
-        }
-
-        SetConsoleLogMessage();
-        
-        label.text = _consoleLog;
+        label.text = GetConsoleLogMessage();
     }
 
-    private void SetConsoleLogMessage()
+    private string GetConsoleLogMessage()
     {
-        _consoleLog = "OnTriggerIntensity: " + _onTriggerIntensityValue +
-                      " ";
+        _consoleLog = "OnTriggerIntensity: " + _onTriggerIntensityValue + "\n" +
+                      "OnTriggerPressed: " + _onTriggerPressedValue + "\n" +
+                      "OnPrimaryButtonPressed: " + _onPrimaryButtonPressedValue + "\n";
+        
+        return _consoleLog;
     }
 }
