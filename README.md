@@ -3,17 +3,19 @@ Simple XR controller events emitter on the top of Unity's XR Toolkit and based o
 
 Right now XREmitter helps getting events from hand controllers (left/right).
 
-<img src="Images/demo2.gif" width="600">
+<img src="images/placeholder.png" width="600">
 
 
 # How to setup it
 1. Add XREmitterR and/or XREmitterL prefabs to your scene;
-<img src="Images/demo2.gif" width="600">
-2. Add XRControllers to the prefabs;
-<img src="Images/demo2.gif" width="600">
-3. Subscribe your method to an event stream (look at an example below).
 
- *Remember, methods you are going to subscribe to the stream have to have the same signature.* 
+<img src="images/placeholder.png" width="600">
+
+2. Add XRControllers to the prefabs;
+
+<img src="images/placeholder.png" width="600">
+
+3. Subscribe your method to an event stream (look at an example below).
 
 # How to use it
 Here is a little example how the XREmitter can be used.
@@ -50,7 +52,7 @@ public class BoxManager : MonoBehaviour
 }
 ```
 # Events List
-
+``` <T> ``` defines the data type that is going to be passed to a subscribed method. It defines a signature of the method.
 ```csharp
     public static event Action<float> OnTriggerIntensity;
     public static event Action<bool> OnTriggerButtonPressed;
