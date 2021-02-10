@@ -7,15 +7,13 @@ Right now XREmitter helps getting events from hand controllers (left/right).
 
 
 # How to setup it
-1. Add XREmitterR and/or XREmitterL prefabs to your scene;
+1. Import XREmitter.unityasset into your project; <img src="images/placeholder.png" width="600">
 
-<img src="images/placeholder.png" width="600">
+2. Add XREmitterR and/or XREmitterL components to Right/Left Controllers in your scene; <img src="images/placeholder.png" width="600">
 
-2. Add XRControllers to the prefabs;
+3. Assign XRControllers to the components accordingly; <img src="images/placeholder.png" width="600">
 
-<img src="images/placeholder.png" width="600">
-
-3. Subscribe your method to an event stream (look at an example below).
+4. Subscribe your method to an event stream (look at an example below).
 
 # How to use it
 Here is a little example how the XREmitter can be used.
@@ -39,7 +37,7 @@ public class BoxManager : MonoBehaviour
         XREmitterR.OnTriggerButtonPressed -= SetBoxVisability;
     }
 
-    // The signature of the method the same as the event stream we are going to subscribe it to (it passed a bool value as a parameter).
+    // The signature of the method the same as the event stream we are going to subscribe it to (it passes a bool value as a parameter).
     private void SetBoxVisability (bool b) 
     {
         // Switch to get the bool value only once when it changes
@@ -52,7 +50,7 @@ public class BoxManager : MonoBehaviour
 }
 ```
 # Events List
-``` <T> ``` defines the data type that is going to be passed to a subscribed method. It defines a signature of the method.
+``` <T> ``` defines a data type that is going to be passed to a subscribed method.
 ```csharp
     public static event Action<float> OnTriggerIntensity;
     public static event Action<bool> OnTriggerButtonPressed;
