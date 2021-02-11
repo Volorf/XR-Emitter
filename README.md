@@ -7,6 +7,8 @@ Right now XREmitter helps getting events from hand controllers (left/right).
 
 
 # How to setup it
+0. Set up Unity XRToolkit and add XR Rig to your scene; <img src="images/placeholder.png" width="600">
+
 1. Import XREmitter.unityasset into your project; <img src="images/placeholder.png" width="600">
 
 2. Add XREmitterR and/or XREmitterL components to Right/Left Controllers in your scene; <img src="images/placeholder.png" width="600">
@@ -16,7 +18,7 @@ Right now XREmitter helps getting events from hand controllers (left/right).
 4. Subscribe your method to an event stream (look at an example below).
 
 # How to use it
-Here is a little example how the XREmitter can be used.
+Here is a little example how the XREmitter can be used. XREmitter's events are static, so you don't need  to 
 
 ```csharp
 using UnityEngine;
