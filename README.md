@@ -1,13 +1,13 @@
 # XR Emitter
-Simple XR controller events emitter on the top of Unity's XR Toolkit and based on the Observer Pattern.
+It's a simple events emitter on the top of Unity's XR Toolkit.
 
-Right now XREmitter helps getting events from hand controllers (left/right).
+Right now XREmitter helps getting events from hand controllers.
 
 <img src="images/placeholder.png" width="600">
 
 
 # How to setup it
-0. Set up Unity XRToolkit and add XR Rig to your scene; <img src="images/placeholder.png" width="600">
+Assume that you already setup XR Toolkit and added XR Rig to your scene.
 
 1. Import XREmitter.unityasset into your project; <img src="images/placeholder.png" width="600">
 
@@ -27,26 +27,24 @@ public class BoxManager : MonoBehaviour
 {
     private bool _lastTriggerButtonState = false;
     
-    // Subsrice a method to an event stream
+    // Subsribe a method to an event stream
     private void OnEnable() 
     {
         XREmitterR.OnTriggerButtonPressed += SetBoxVisability;
     }
 
-    // That's a general good practice to unsubscribe a method when its object is gone)
+    // A good practice to unsubscribe a method when its object is gone
     private void OnDisable() 
     {
         XREmitterR.OnTriggerButtonPressed -= SetBoxVisability;
     }
 
-    // The signature of the method the same as the event stream we are going to subscribe it to (it passes a bool value as a parameter).
+    // The signature of the method the same as the event stream we want to subscribe it to.
     private void SetBoxVisability (bool b) 
     {
-        // Switch to get the bool value only once when it changes
         if (_lastTriggerButtonState == b) return;
         _lastTriggerButtonState = b;
 
-        // Set visability based on the bool value
         this.transform.gameobject.SetActive(b);
     }
 }
@@ -67,3 +65,4 @@ public class BoxManager : MonoBehaviour
     public static event Action<bool> OnPrimary2DAxisTouched;
 ```
 
+# Links
