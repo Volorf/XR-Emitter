@@ -5,7 +5,6 @@ Right now XREmitter helps getting events from hand controllers.
 
 <img src="images/placeholder.png" width="600">
 
-
 # How to setup it
 Assume that you already setup XR Toolkit and added XR Rig to your scene.
 
@@ -45,24 +44,24 @@ public class BoxManager : MonoBehaviour
         if (_lastTriggerButtonState == b) return;
         _lastTriggerButtonState = b;
 
-        this.transform.gameobject.SetActive(b);
+        this.gameobject.SetActive(b);
     }
 }
 ```
 # Events List
 ``` <T> ``` defines a data type that is going to be passed to a subscribed method.
 ```csharp
-    public static event Action<float> OnTriggerIntensity;
-    public static event Action<bool> OnTriggerButtonPressed;
-    public static event Action<bool> OnPrimaryButtonPressed;
-    public static event Action<bool> OnPrimaryButtonTouched;
-    public static event Action<bool> OnSecondaryButtonPressed;
-    public static event Action<bool> OnSecondaryButtonTouched;
-    public static event Action<float> OnGripIntensity;
-    public static event Action<bool> OnGripPressed;
-    public static event Action<Vector2> OnPrimary2DAxis;
-    public static event Action<bool> OnPrimary2DAxisPressed;
-    public static event Action<bool> OnPrimary2DAxisTouched;
+public static event Action<float>   OnTriggerIntensity;
+public static event Action<bool>    OnTriggerButtonPressed;
+public static event Action<bool>    OnPrimaryButtonPressed;
+public static event Action<bool>    OnPrimaryButtonTouched;
+public static event Action<bool>    OnSecondaryButtonPressed;
+public static event Action<bool>    OnSecondaryButtonTouched;
+public static event Action<float>   OnGripIntensity;
+public static event Action<bool>    OnGripPressed;
+public static event Action<Vector2> OnPrimary2DAxis;
+public static event Action<bool>    OnPrimary2DAxisPressed;
+public static event Action<bool>    OnPrimary2DAxisTouched;
 ```
 
 # Links
