@@ -1,23 +1,25 @@
 # XR Emitter
-Simple events emitter on the top of Unity's XR Toolkit.
+Events emitter on the top of Unity's XR Toolkit.
 
-Right now XREmitter helps getting events from hand controllers.
+Right now XREmitter helps getting events from hand controllers ([a list of the events](#events-list)).
 
 <img src="images/demo1.gif" width="600">
 
 # How to setup it
 Assume that you already set up XR Toolkit and added XR Rig to your scene.
 
-1. Import XREmitter.unityasset into your project; <img src="images/import_asset.gif" width="600">
+1. Import `XREmitter.unityasset` into your project; <img src="images/import_asset.gif" width="600">
 
-2. Add XREmitterR and/or XREmitterL components to Right/Left Controllers in your scene; <img src="images/add_xremitter_component.gif" width="600">
+2. Add `XREmitterR` and/or `XREmitterL` components to Right/Left Controllers in your scene; <img src="images/add_xremitter_component.gif" width="600">
 
 3. Assign XRControllers to the components accordingly; <img src="images/add_xrcontroller_to_xremitter.gif" width="600">
 
 4. Subscribe your method to an event stream (look at an example below).
 
 # How to use it
-Here is a little example how the XREmitter can be used. XREmitter's events are static, so you don't need to have a reference to an object.
+Here is a simple example how the `XREmitter` can be used. 
+
+Note, XREmitter's events are static, so you don't need to have a reference to an object.
 
 ```csharp
 using UnityEngine;
@@ -49,7 +51,7 @@ public class BoxManager : MonoBehaviour
 }
 ```
 # Events List
-``` <T> ``` defines a data type that is going to be passed to a subscribed method.
+` <T> ` defines a data type that is going to be passed to a subscribed method.
 ```csharp
 public static event Action<float>   OnTriggerIntensity;
 public static event Action<bool>    OnTriggerButtonPressed;
