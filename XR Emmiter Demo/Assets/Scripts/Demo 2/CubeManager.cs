@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CubeManager : MonoBehaviour
 {
-    private bool _lastTriggerButtonState = false;
+
+    [SerializeField] private GameObject cube;
+    private bool _lastTriggerButtonState = true;
     
     // Subscribe a method to an event stream
     private void OnEnable() 
@@ -24,6 +24,6 @@ public class CubeManager : MonoBehaviour
         if (_lastTriggerButtonState == b) return;
         _lastTriggerButtonState = b;
 
-        this.gameObject.SetActive(b);
+        cube.gameObject.SetActive(!b);
     }
 }
