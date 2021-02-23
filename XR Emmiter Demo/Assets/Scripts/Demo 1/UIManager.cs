@@ -59,7 +59,7 @@ public class UIManager : MonoBehaviour
                       "OnPrimaryTouched: " + _onPrimaryTouchedValue + "\n" +
                       "OnSecondaryButtonPressed: " + _onSecondaryButtonPressed + "\n" +
                       "OnSecondaryButtonTouched: " + _onSecondaryButtonTouched + "\n" +
-                      "OnGripIntensity: " + _onGripIntensity + "\n" +
+                      "OnGripIntensity: " + Math.Round(_onGripIntensity, 3) + "\n" +
                       "OnGripPressed: " + _onGripPressed + "\n" +
                       "OnPrimary2DAxis: " + _onPrimary2DAxis + "\n" +
                       "OnPrimary2DAxisPressed: " + _onPrimary2DAxisPressed + "\n" +
