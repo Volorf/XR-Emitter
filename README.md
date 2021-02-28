@@ -21,7 +21,7 @@ Here is a simple example of how the `XREmitter` can be used.
 
 Note, XREmitter's events are static, so you don't need to have a reference to an object.
 
-*(Look at the `XR Emmiter Demo/Assets/Scenes/Demo 1.unity` to see the example in action.)*
+*(Look at the `XR Emmiter Demo/Assets/Scenes/Demo 2.unity` to see the example in action.)*
 
 ```csharp
 using UnityEngine;
