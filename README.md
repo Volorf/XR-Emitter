@@ -21,14 +21,17 @@ Here is a simple example how the `XREmitter` can be used.
 
 Note, XREmitter's events are static, so you don't need to have a reference to an object.
 
+*(Look at the Demo2 scene in the Unity demo project to see the example in action.)*
+
 ```csharp
 using UnityEngine;
 
-public class BoxManager : MonoBehaviour
+public class CubeManager : MonoBehaviour
 {
-    private bool _lastTriggerButtonState = false;
+    [SerializeField] private GameObject cube;
+    private bool _lastTriggerButtonState = true;
     
-    // Subsribe a method to an event stream
+    // Subscribe a method to an event stream
     private void OnEnable() 
     {
         XREmitterR.OnTriggerButtonPressed += SetBoxVisability;
@@ -46,7 +49,7 @@ public class BoxManager : MonoBehaviour
         if (_lastTriggerButtonState == b) return;
         _lastTriggerButtonState = b;
 
-        this.gameobject.SetActive(b);
+        cube.gameObject.SetActive(!b);
     }
 }
 ```
