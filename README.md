@@ -5,7 +5,7 @@ Right now XREmitter helps getting events from hand controllers ([a list of the e
 
 <img src="media/xr_emitter_events.gif" width="600">
 
-# How to setup it
+# How to set up it
 Assume that you already set up XR Toolkit and added XR Rig to your scene.
 
 1. Import `XREmitter.unityasset` into your project;
@@ -53,6 +53,8 @@ public class CubeManager : MonoBehaviour
     }
 }
 ```
+<img src="media/xr_emitter_events2.gif" width="600">
+
 # Events List
 ` <T> ` defines a data type that is going to be passed to a subscribed method.
 ```csharp
@@ -69,5 +71,5 @@ public static event Action<bool>    OnPrimary2DAxisPressed;
 public static event Action<bool>    OnPrimary2DAxisTouched;
 ```
 
-# Links
+# Contact
 [Portfolio](https://olegfrolov.design/) | [Linkedin](https://www.linkedin.com/in/oleg-frolov-6a6a4752/) | [Dribbble](https://dribbble.com/Volorf) | [Twitter](https://www.twitter.com/volorf)
