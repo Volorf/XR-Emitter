@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,6 +21,7 @@ public class VrControllerManager : MonoBehaviour
 
         if (currentHand == Hand.Right)
         {
+
             XREmitterR.OnSecondaryButtonPressed += UpdateSecondaryButtonState;
             XREmitterR.OnPrimaryButtonPressed += UpdatePrimaryButtonState;
             XREmitterR.OnTriggerIntensity += UpdateTriggerButtonState;
