@@ -1,5 +1,5 @@
 # XR Emitter
-Events emitter on the top of Unity's XR Toolkit.
+Events emitter on the top of Unity's XR Interaction Toolkit.
 
 Right now XREmitter helps getting events from hand controllers ([a list of the events](#events-list)).
 
