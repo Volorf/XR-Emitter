@@ -1,7 +1,7 @@
 # XR Emitter
-Events emitter on the top of Unity's XR Interaction Toolkit.
+Events emitter is a wrapper over Unity's XR Interaction Toolkit that provides an easy-to-use way to interact with XR events.
 
-Right now XREmitter helps getting events from hand controllers ([a list of the events](#events-list)).
+Right now, XREmitter helps to get events from hand controllers ([a list of the events](#events-list)).
 
 <img src="media/xr_emitter_events.gif" width="600">
 
@@ -17,7 +17,7 @@ Assume that you already set up XR Toolkit and added XR Rig to your scene.
 4. Subscribe your method to an event stream.
 
 # How to use it
-Here is a simple example how the `XREmitter` can be used. 
+Here is a simple example of how the `XREmitter` can be used. 
 
 Note, XREmitter's events are static, so you don't need to have a reference to an object.
 
@@ -43,7 +43,7 @@ public class CubeManager : MonoBehaviour
         XREmitterR.OnTriggerButtonPressed -= SetBoxVisability;
     }
 
-    // The signature of the method the same as the event stream we want to subscribe it to.
+    // The signature of the method the same as the event stream we want to subscribe to.
     private void SetBoxVisability (bool b) 
     {
         if (_lastTriggerButtonState == b) return;
