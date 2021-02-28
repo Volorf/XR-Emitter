@@ -3,18 +3,18 @@ Events emitter on the top of Unity's XR Interaction Toolkit.
 
 Right now XREmitter helps getting events from hand controllers ([a list of the events](#events-list)).
 
-<img src="images/demo1.gif" width="600">
+<img src="media/xr_emitter_events.gif" width="600">
 
 # How to setup it
 Assume that you already set up XR Toolkit and added XR Rig to your scene.
 
-1. Import `XREmitter.unityasset` into your project; <img src="images/import_asset.gif" width="600">
+1. Import `XREmitter.unityasset` into your project;
 
-2. Add `XREmitterR` and/or `XREmitterL` components to Right/Left Controllers in your scene; <img src="images/add_xremitter_component.gif" width="600">
+2. Add `XREmitterR` and/or `XREmitterL` component to Right/Left Controller in your scene;
 
-3. Assign XRControllers to the components accordingly; <img src="images/add_xrcontroller_to_xremitter.gif" width="600">
+3. Assign XRControllers to the components accordingly;
 
-4. Subscribe your method to an event stream (look at an example below).
+4. Subscribe your method to an event stream.
 
 # How to use it
 Here is a simple example how the `XREmitter` can be used. 
